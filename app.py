@@ -9,7 +9,7 @@ st.title("📊 Google Play Store Dashboard")
 # -----------------------------
 # LOAD DATA
 # -----------------------------
-df = pd.read_csv("C:/Users/Vishal.S/Downloads/intership of google play store/cleaned_dataset.csv")
+df = pd.read_csv("cleaned_dataset.csv")
 
 df['Last Updated'] = pd.to_datetime(df['Last Updated'], errors='coerce')
 df['Category'] = df['Category'].str.strip()
