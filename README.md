@@ -83,6 +83,7 @@ Playstore-dashboard :
  Task 6: Growth Analysis
 
    Displays install growth patterns using area charts.
+
 ---
 ## Key Insights
 A small number of categories dominate total installs
