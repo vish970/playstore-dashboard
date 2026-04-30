@@ -30,7 +30,7 @@ The dashboard provides a **user-friendly interface** with dynamic filters and in
 
 ---
 
-## 🧠 Business Use Cases
+##  Business Use Cases
 
 - Identify top-performing app categories  
 - Analyze user engagement through ratings and installs  
@@ -59,7 +59,7 @@ Playstore-dashboard :
 ── README.md # Project documentation
 ---
 
-Dashboard Modules
+##Dashboard Modules
  Task 1: Category Performance
 
   Analyzes average ratings and rating counts across top categories.
@@ -84,14 +84,14 @@ Dashboard Modules
 
    Displays install growth patterns using area charts.
 
-Key Insights
+##Key Insights
 A small number of categories dominate total installs
 Higher ratings do not always correlate with higher revenue
 Free apps generally have higher installs but lower revenue per user
 Trends show seasonal variations in app usage
 
 
-Author
+##Author
 Vishal S
 Data Science & Analytics Enthusiast
 
