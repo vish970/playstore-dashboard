@@ -90,11 +90,13 @@ A small number of categories dominate total installs
 Higher ratings do not always correlate with higher revenue
 Free apps generally have higher installs but lower revenue per user
 Trends show seasonal variations in app usage
+
 ---
 
 ## Author
 Vishal S
 Data Science & Analytics Enthusiast
+
 ---
 
 
