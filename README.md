@@ -1,117 +1,124 @@
-# Google Play Store Analytics Dashboard
+ Google Play Store Analytics Dashboard
+An interactive analytics dashboard built with Python, Streamlit, and Plotly to visualize and explore Google Play Store data across 6 detailed tasks.
 
-An interactive, using **Streamlit** and **Plotly** to analyze and visualize Google Play Store application data.
+ Live Application
+ https://playstore-dashboard-utkz4edqog2apcpm8wxdek.streamlit.app
 
----
+ Demo Mode (For Reviewers)
+Each chart is time-restricted as per task requirements and is only visible during a specific IST time window.
 
-##  Live Application
-🔗 https://playstore-dashboard-utkz4edqog2apcpm8wxdek.streamlit.app
+ To view all charts at any time, please enable  Demo Mode from the left sidebar of the dashboard.
 
----
+TaskChart TypeTime Window (IST)Task 1Grouped Bar Chart3:00 PM – 5:00 PMTask 2Choropleth Map6:00 PM – 8:00 PMTask 3Dual-Axis Chart1:00 PM – 2:00 PMTask 4Time Series Line Chart6:00 PM – 9:00 PMTask 5Bubble Chart5:00 PM – 7:00 PMTask 6Stacked Area Chart4:00 PM – 6:00 PM
 
-##  Overview
+Task Overview
+Task 1 — Grouped Bar Chart (3 PM – 5 PM IST)
+Compares average rating and total review count for the top 10 app categories by installs.
+Filters Applied:
 
-This project focuses on exploring Google Play Store data to uncover meaningful insights related to app performance, installs, ratings, revenue, and growth trends.
+Average rating ≥ 4.0
+App size ≥ 10 MB
+Last updated in January only
 
-The dashboard provides a **user-friendly interface** with dynamic filters and interactive visualizations, enabling efficient data exploration similar to business intelligence tools like Phyton.
 
----
+Task 2 — Choropleth Map (6 PM – 8 PM IST)
+Visualizes global installs by category using an interactive Plotly choropleth map.
+Filters Applied:
 
-## Key Features
+Top 5 app categories by total installs
+Installs > 1,000,000
+Categories must not start with: A, C, G, or S
 
-- **Interactive Dashboard UI (Power BI Style)**
--  **Dynamic Sidebar Filters**
-- **KPI Metrics (Apps, Ratings, Installs, Revenue)**
-- **Tab-based Navigation for Better UX**
--  **Geographical Analysis (Choropleth Map)**
-- **Trend Analysis (Line & Area Charts)**
-- **Scatter Analysis for Insights**
--  **Modern Dark Theme**
 
----
+Task 3 — Dual-Axis Chart (1 PM – 2 PM IST)
+Compares average installs (bars) and average revenue (lines) for Free vs Paid apps across the top 3 categories.
+Filters Applied:
 
-##  Business Use Cases
+Installs ≥ 10,000
+Revenue ≥ $10,000
+Android version > 4.0
+App size > 15 MB
+Content rating = Everyone
+App name ≤ 30 characters (including spaces and special characters)
 
-- Identify top-performing app categories  
-- Analyze user engagement through ratings and installs  
-- Compare Free vs Paid app performance  
-- Monitor growth trends over time  
-- Understand global distribution of app installs  
 
----
+Task 4 — Time Series Line Chart (6 PM – 9 PM IST)
+Tracks total installs over time segmented by category. Periods of significant growth are highlighted with shaded bands and percentage annotations.
+Filters Applied:
 
-##  Tech Stack
+Category starts with: E, C, or B
+Reviews > 500
+App name does not start with: x, y, or z
+App name does not contain the letter S (case-insensitive)
+Growth highlight: months where installs increase > 20% month-over-month
 
-| Technology | Purpose |
-|-----------|--------|
-| Python | Core programming language |
-| Pandas | Data manipulation |
-| Plotly | Interactive visualizations |
-| Streamlit | Web app framework |
+Translations:
+OriginalTranslatedLanguageBeautyसौंदर्यHindiBusinessவணிகம்TamilDatingPartnersucheGerman
 
----
+Task 5 — Bubble Chart (5 PM – 7 PM IST)
+Analyzes the relationship between app size and average rating, with bubble size representing number of installs.
+Filters Applied:
 
-## Project Structure
-Playstore-dashboard :
-── app.py # Main Streamlit application
-── cleaned_dataset.csv # Dataset used for analysis
-── requirements.txt # Dependencies
-── README.md # Project documentation
----
+Rating > 3.5
+Installs > 50,000
+Reviews > 500
+Sentiment subjectivity > 0.5
+App name does not contain the letter S (case-insensitive)
+Categories: Game, Beauty, Business, Comics, Communication, Dating, Entertainment, Social, Events
 
-## Dashboard Modules
- Task 1: Category Performance
+Highlights:
 
-  Analyzes average ratings and rating counts across top categories.
+ Game category is highlighted in Pink
 
- Task 2: Global Installs Distribution
+Translations:
+OriginalTranslatedLanguageBeautyसौंदर्यHindiBusinessவணிகம்TamilDatingPartnersucheGerman
 
-   Visualizes installs across countries using a choropleth map.
+Task 6 — Stacked Area Chart (4 PM – 6 PM IST)
+Visualizes cumulative installs over time for each category as a color-banded area chart.
+Filters Applied:
 
- Task 3: Free vs Paid Apps
+Average rating ≥ 4.2
+App name does not contain any numbers
+Category starts with: T or P
+Reviews > 1,000
+App size between 20 MB and 80 MB
+Growth highlight: months where total installs increase > 25% month-over-month (gold shading)
 
-   Compares average installs and revenue between free and paid apps.
+Legend Translations:
+OriginalTranslatedLanguageTravel & LocalVoyage & LocalFrenchProductivityProductividadSpanishPhotography写真 (Shashin)Japanese
 
- Task 4: Install Trends
+ Tech Stack
+TechnologyPurposePythonCore programming languagePandasData manipulation and filteringPlotlyInteractive visualizationsStreamlitWeb application frameworkPytzIST timezone handling
 
-  Tracks category-wise install trends over time.
+ Project Structure
+Playstore-dashboard/
+├── app.py                  # Main Streamlit application
+├── cleaned_dataset.csv     # Cleaned dataset used for analysis
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation
 
- Task 5: Size vs Rating Analysis
+ How to Run Locally
+Step 1 — Clone the repository
+bashgit clone https://github.com/vish970/Playstore-dashboard.git
+cd Playstore-dashboard
+Step 2 — Install dependencies
+bashpip install -r requirements.txt
+Step 3 — Run the app
+bashstreamlit run app.py
+Step 4 — Open in browser
+The app will open automatically at:
+http://localhost:8501
 
-  Explores the relationship between app size and user ratings.
+ Requirements
+streamlit
+pandas
+plotly
+pytz
 
- Task 6: Growth Analysis
-
-   Displays install growth patterns using area charts.
-
----
-## Key Insights
-A small number of categories dominate total installs
-Higher ratings do not always correlate with higher revenue
-Free apps generally have higher installs but lower revenue per user
-Trends show seasonal variations in app usage
-
----
-
-## Author
+ Author
 Vishal S
 Data Science & Analytics Enthusiast
 
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Submitted To
+Elevnce Skills Technology
+Internship Project — Google Play Store Analytics Dashboard
